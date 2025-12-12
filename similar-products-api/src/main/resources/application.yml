@@ -10,6 +10,8 @@ external:
 spring:
   application:
     name: similar-products-api
+  codec:
+    max-in-memory-size: 10MB
 
 # Resilience4j Configuration
 resilience4j:
@@ -27,8 +29,9 @@ resilience4j:
         recordExceptions:
           - java.io.IOException
           - java.util.concurrent.TimeoutException
+          - com.carlossevilla.similar_products_api.domain.exception.ExternalServiceException
         ignoreExceptions:
-          - com.example.domain.exception.ProductNotFoundException
+          - com.carlossevilla.similar_products_api.domain.exception.ProductNotFoundException
 
   timelimiter:
     instances:
@@ -44,11 +47,7 @@ resilience4j:
         exponentialBackoffMultiplier: 2
         retryExceptions:
           - java.io.IOException
-
-# WebClient Configuration
-spring:
-  codec:
-    max-in-memory-size: 10MB
+          - com.carlossevilla.similar_products_api.domain.exception.ExternalServiceException
 
 # Actuator
 management:

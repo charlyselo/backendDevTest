@@ -23,7 +23,6 @@ public class WebClientConfig {
                 .maxConnections(500)
                 .pendingAcquireMaxCount(1000)
                 .pendingAcquireTimeout(Duration.ofSeconds(45))
-                .maxIdleTime(Duration.ofSeconds(20))
                 .build();
 
         // HTTP client with timeouts

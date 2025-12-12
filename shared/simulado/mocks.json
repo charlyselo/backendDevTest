@@ -31,12 +31,12 @@
   },
   {
     "path": "/product/2",
-    "body": "{\"id\":\"2\",\"name\":\"Dress\",\"price\":19.99,\"availability\":true}",
+    "body": "{\"id\":\"2\",\"name\":\"Longsleeve\",\"price\":19.99,\"availability\":true}",
     "headers": {"Content-Type": "application/json"}
   },
   {
     "path": "/product/3",
-    "body": "{\"id\":\"3\",\"name\":\"Blazer\",\"price\":29.99,\"availability\":false}",
+    "body": "{\"id\":\"3\",\"name\":\"Jacket\",\"price\":29.99,\"availability\":false}",
     "headers": {"Content-Type": "application/json"},
     "delay": 100
   },
